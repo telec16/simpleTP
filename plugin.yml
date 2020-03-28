@@ -1,0 +1,9 @@
+name: simpleTP
+prefix: simpleTP
+main: fr.telec.simpleTP.SimpleTP
+version: 0.1
+api-version: 1.15
+load: POSTWORLD
+authors: 
+  - telec16
+commands:
