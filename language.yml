@@ -1,0 +1,27 @@
+language: enUs
+
+lang:
+  enUs:
+    updated: 'Updated to configuration files'
+    only_player: 'You must be a player!'
+    cooldown: 'Sorry! You still have to wait <time> seconds before the next <command>...'
+    no_back: '&1&lNo previous location...'
+    home_set: '<warp> set!'
+    home_set_error: 'Unable to set <warp>... Too many? Currently using <count> out of <max> warps. Home is allowed: <okhome>.'
+    home_del: 'Deleted <warp>'
+    list_home: 'Here is all your homes:'
+    show_home: '<warp> is at [<X>,<Y>,<Z>] in <world>'
+    home_go: 'Arrived at <warp>'
+    home_go_error: 'Unable to set <warp>... Too many? Max is <max> warps. Home is allowed: <okhome>.'
+  frFR:
+    updated: 'Mis à jour à partir des fichiers de configuration'
+    only_player: 'Tu dois être un joueur !'
+    cooldown: 'Désolé ! Tu dois encore attendre <time> secondes avant le prochain <command>...'
+    no_back: '&1&lPas d''ancienne position...'
+    home_set: '<warp> défini !'
+    home_set_error: 'Impossible de définir <warp>... Trop? Tu utilise <count> sur <max> warps. Home est autorisé: <okhome>.'
+    home_del: '<warp> supprimé'
+    list_home: 'Voici tes homes:'
+    show_home: '<warp> est en [<X>,<Y>,<Z>] dans <world>'
+    home_go: 'Arrivé à <warp>'
+    home_go_error: 'Impossible de définir <warp>... Trop? Le max est de <max> warps. Home est autorisé: <okhome>.'

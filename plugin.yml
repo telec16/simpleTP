@@ -1,9 +1,57 @@
 name: simpleTP
 prefix: simpleTP
 main: fr.telec.simpleTP.SimpleTP
-version: 0.1
+version: 1.0
 api-version: 1.15
 load: POSTWORLD
-authors: 
-  - telec16
+authors:
+- telec16
 commands:
+  update:
+    description: Update the configuration
+    usage: /<command>
+    permission: simpletp.update
+    permission-message: You don't have <permission>
+  sethome:
+    description: Define your home (or a warppoint if warp is set)
+    usage: /<command> [warp]
+  showhome:
+    description: Show your home coordinates (or a warppoint if warp is set)
+    usage: /<command> [warp]
+  listhome:
+    description: List all warppoints
+    usage: /<command>
+  delhome:
+    description: Delete your home (or a warppoint if warp is set)
+    usage: /<command> [warp]
+  home:
+    description: Go to your home (or a warppoint if warp is set)
+    usage: /<command> [warp]
+  back:
+    description: Go to last death, or last TP, whichever the later
+    usage: /<command>
+  tpto:
+    aliases:
+    - tpt
+    description: Ask to player to teleport you to them
+    usage: /<command> <name>
+  tphere:
+    aliases:
+    - tph
+    description: Ask to player to teleport them to you
+    usage: /<command> <name>
+  tpcancel:
+    aliases:
+    - tpc
+    description: Cancel tpto or tphere
+    usage: /<command>
+  tpaccept:
+    aliases:
+    - tpa
+    description: Accept teleport request
+    usage: /<command>
+  tpdeny:
+    aliases:
+    - tpd
+    description: Deny teleport request
+    usage: /<command>
