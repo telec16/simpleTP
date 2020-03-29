@@ -15,7 +15,7 @@ public class HomeHandler {
 
 	public static final String HOME = "home";
 	private static final String HOMES_FILENAME = "locations.yml";
-	
+
 	private ConfigAccessor homesAcs = null;
 	private FileConfiguration homes = null;
 	private boolean use_UUID = true;
@@ -51,7 +51,7 @@ public class HomeHandler {
 
 	public Set<String> getHomeList(Player player) {
 		ConfigurationSection home = homes.getConfigurationSection(getRoot(player));
-		if(home != null)
+		if (home != null)
 			return home.getKeys(false);
 		else
 			return new HashSet<String>();

@@ -5,5 +5,5 @@ allows:
   maxwarps: 2 # 0 for infinite
 cooldown: # In seconds
   home: 3
-  back: 10
+  back: 0
   tp: 10

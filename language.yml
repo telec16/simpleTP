@@ -12,7 +12,7 @@ lang:
     list_home: 'Here is all your homes:'
     show_home: '<warp> is at [<X>,<Y>,<Z>] in <world>'
     home_go: 'Arrived at <warp>'
-    home_go_error: 'Unable to set <warp>... Too many? Max is <max> warps. Home is allowed: <okhome>.'
+    home_go_error: 'Unable to go to <warp>... Too many? Max is <max> warps. Home is allowed: <okhome>.'
   frFR:
     updated: 'Mis à jour à partir des fichiers de configuration'
     only_player: 'Tu dois être un joueur !'
@@ -24,4 +24,4 @@ lang:
     list_home: 'Voici tes homes:'
     show_home: '<warp> est en [<X>,<Y>,<Z>] dans <world>'
     home_go: 'Arrivé à <warp>'
-    home_go_error: 'Impossible de définir <warp>... Trop? Le max est de <max> warps. Home est autorisé: <okhome>.'
+    home_go_error: 'Impossible d''aller à <warp>... Trop? Le max est de <max> warps. Home est autorisé: <okhome>.'
