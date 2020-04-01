@@ -111,6 +111,8 @@ public class TP {
 		Player other = askTarget ? target : moved;
 
 		Map<String, String> values = new HashMap<String, String>();
+		values.put("accept", Commands.TPACCEPT);
+		values.put("deny", Commands.TPDENY);
 		values.put("moved", movedName);
 		values.put("target", targetName);
 		values.put("you", player.getDisplayName());
@@ -148,6 +150,8 @@ public class TP {
 				other.sendMessage(StringHandler.translate(lg.get("tpto"), values));
 			else
 				other.sendMessage(StringHandler.translate(lg.get("tphere"), values));
+			
+			player.sendMessage(StringHandler.translate(lg.get("sended"), values));
 
 			cld.use(player, MDK_TP_COOLDOWN);
 		} else {

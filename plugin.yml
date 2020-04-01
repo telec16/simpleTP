@@ -1,7 +1,7 @@
 name: simpleTP
 prefix: simpleTP
 main: fr.telec.simpleTP.SimpleTP
-version: 1.1
+version: 2.0
 api-version: 1.15
 softdepend:
 - SimpleCore
