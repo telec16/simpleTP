@@ -46,7 +46,7 @@ public class Back implements Listener {
 	@EventHandler
 	public void onPlayerTeleportEvent(PlayerTeleportEvent evt) {
 		Player player = evt.getPlayer();
-		MetadataAccessor.setMetadata(plugin, player, MDK_LAST_LOCATION, player.getLocation());
+		MetadataAccessor.setMetadata(plugin, player, MDK_LAST_LOCATION, evt.getFrom());
 	}
 
 	/*
