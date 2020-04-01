@@ -6,14 +6,6 @@ import org.bukkit.entity.Player;
 
 public class TPHandler {
 
-	public TPHandler() {
-	}
-
-	public void askTp(Player moved, Player target, boolean askTarget) {
-		// TODO Auto-generated method stub
-		
-	}
-
 	public static void teleport(Player player, Player target) {
 		teleport(player, target.getLocation());
 	}

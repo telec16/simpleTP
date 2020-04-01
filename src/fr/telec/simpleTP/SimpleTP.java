@@ -31,7 +31,7 @@ public class SimpleTP extends JavaPlugin {
 
 		back = new Back(this, lg, cld);
 		home = new Home(this, lg, cld);
-		tp = new TP(lg, cld);
+		tp = new TP(this, lg, cld);
 	}
 
 	@Override
@@ -53,11 +53,11 @@ public class SimpleTP extends JavaPlugin {
 			Player player = (Player) sender;
 			if (args.length == 0) {
 				if (cmd.getName().equalsIgnoreCase(Commands.TPCANCEL)) {
-					return tp.cancelTp(player);
+					return tp.cancel(player);
 				} else if (cmd.getName().equalsIgnoreCase(Commands.TPACCEPT)) {
-					return tp.acceptTp(player);
+					return tp.accept(player);
 				} else if (cmd.getName().equalsIgnoreCase(Commands.TPDENY)) {
-					return tp.denyTp(player);
+					return tp.deny(player);
 				} else if (cmd.getName().equalsIgnoreCase(Commands.BACK)) {
 					return back.go(player);
 				} else if (cmd.getName().equalsIgnoreCase(Commands.LISTHOME)) {
@@ -73,9 +73,9 @@ public class SimpleTP extends JavaPlugin {
 				}
 			} else if (args.length == 1) {
 				if (cmd.getName().equalsIgnoreCase(Commands.TPTO)) {
-					return tp.askTp(player, args[0]);
+					return tp.ask(player, args[0]);
 				} else if (cmd.getName().equalsIgnoreCase(Commands.TPHERE)) {
-					return tp.askTp(args[0], player);
+					return tp.ask(args[0], player);
 				} else if (cmd.getName().equalsIgnoreCase(Commands.SETHOME)) {
 					return home.set(player, args[0]);
 				} else if (cmd.getName().equalsIgnoreCase(Commands.DELHOME)) {
