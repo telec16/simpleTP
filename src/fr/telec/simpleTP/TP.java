@@ -107,7 +107,7 @@ public class TP {
 	private boolean testNask(String movedName, String targetName, boolean askTarget) {
 		String playerName = askTarget ? movedName : targetName;
 		String otherName = askTarget ? targetName : movedName;
-		
+
 		Player moved = (Bukkit.getServer().getPlayer(movedName));
 		Player target = (Bukkit.getServer().getPlayer(targetName));
 		Player player = (Bukkit.getServer().getPlayer(playerName));
@@ -153,7 +153,8 @@ public class TP {
 				other.sendMessage(StringHandler.translate(lg.get("tpto"), values));
 			else
 				other.sendMessage(StringHandler.translate(lg.get("tphere"), values));
-			
+			other.sendMessage(StringHandler.translate(lg.get("accept_deny"), values));
+
 			player.sendMessage(StringHandler.translate(lg.get("sended"), values));
 
 			cld.use(player, MDK_TP_COOLDOWN);
