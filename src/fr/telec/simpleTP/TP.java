@@ -105,31 +105,34 @@ public class TP {
 	 */
 
 	private boolean testNask(String movedName, String targetName, boolean askTarget) {
+		String playerName = askTarget ? movedName : targetName;
+		String otherName = askTarget ? targetName : movedName;
+		
 		Player moved = (Bukkit.getServer().getPlayer(movedName));
 		Player target = (Bukkit.getServer().getPlayer(targetName));
-		Player player = askTarget ? moved : target;
-		Player other = askTarget ? target : moved;
+		Player player = (Bukkit.getServer().getPlayer(playerName));
+		Player other = (Bukkit.getServer().getPlayer(otherName));
 
 		Map<String, String> values = new HashMap<String, String>();
 		values.put("accept", Commands.TPACCEPT);
 		values.put("deny", Commands.TPDENY);
 		values.put("moved", movedName);
 		values.put("target", targetName);
-		values.put("you", player.getDisplayName());
+		values.put("player", playerName);
+		values.put("other", otherName);
 
 		if (isInvolved(player)) {
-			moved.sendMessage(StringHandler.translate(lg.get("player_involved"), values));
+			player.sendMessage(StringHandler.translate(lg.get("player_involved"), values));
 			return false;
 		}
 
 		if (other == null) {
-			moved.sendMessage(StringHandler.translate(lg.get("no_online"), values));
+			player.sendMessage(StringHandler.translate(lg.get("no_online"), values));
 			return false;
 		}
-		values.put("other", other.getDisplayName());
 
 		if (isInvolved(player)) {
-			moved.sendMessage(StringHandler.translate(lg.get("other_involved"), values));
+			player.sendMessage(StringHandler.translate(lg.get("other_involved"), values));
 			return false;
 		}
 
